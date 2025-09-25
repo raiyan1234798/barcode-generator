@@ -1,0 +1,5 @@
+{
+  "name": "ArabTimes Barcode Generator",
+  "description": "A simple and effective barcode generator for ArabTimes. Create, save, and manage EAN-13 barcodes with item names and MRP directly in your browser. Designed for both mobile and desktop use with offline capabilities.",
+  "requestFramePermissions": []
+}

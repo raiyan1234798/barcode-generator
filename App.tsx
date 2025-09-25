@@ -12,7 +12,7 @@ type View = 'generator' | 'saved';
 
 const App: React.FC = () => {
   const [view, setView] = useState<View>('generator');
-  const [savedItems, setSavedItems] = useLocalStorage<BarcodeItem[]>('arabTimesBarcodes', []);
+  const [savedItems, setSavedItems] = useLocalStorage<BarcodeItem[]>('arabtimesBarcodes', []);
 
   const addBarcodeItem = useCallback((item: Omit<BarcodeItem, 'id' | 'timestamp'>) => {
     // Prevent duplicates based on item code
@@ -65,7 +65,7 @@ const App: React.FC = () => {
         </main>
         
         <footer className="text-center mt-8 text-slate-500 text-xs">
-          <p>&copy; {new Date().getFullYear()} ArabTimes Barcode Solutions. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Arabtimes. All rights reserved.</p>
         </footer>
       </div>
     </div>

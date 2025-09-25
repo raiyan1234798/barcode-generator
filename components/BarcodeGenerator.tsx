@@ -183,7 +183,7 @@ const BarcodeGenerator: React.FC<BarcodeGeneratorProps> = ({ onSave }) => {
       const file = new File([blob], `${generatedData.name.replace(/ /g, '_')}-${generatedData.code}.png`, { type: 'image/png' });
       try {
         await navigator.share({
-          title: 'ArabTimes Barcode Label',
+          title: 'Arabtimes Barcode Label',
           text: `Barcode for ${generatedData.name} (MRP: ${generatedData.price})`,
           files: [file],
         });
@@ -204,7 +204,7 @@ const BarcodeGenerator: React.FC<BarcodeGeneratorProps> = ({ onSave }) => {
       <div className="space-y-6">
         <div>
           <label htmlFor="itemName" className="block text-sm font-medium text-slate-300 mb-1">Item Name</label>
-          <input type="text" id="itemName" value={itemName} onChange={(e) => setItemName(e.target.value)} className="w-full bg-slate-700 border border-slate-600 text-white rounded-md px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none" placeholder="e.g., Basmati Rice 1kg" />
+          <input type="text" id="itemName" value={itemName} onChange={(e) => setItemName(e.target.value)} className="w-full bg-slate-700 border border-slate-600 text-white rounded-md px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none" placeholder="e.g., Rolex Submariner 116610LN" />
         </div>
         <div>
           <label htmlFor="itemCode" className="block text-sm font-medium text-slate-300 mb-1">Item Code (12 Digits for EAN-13)</label>
@@ -212,7 +212,7 @@ const BarcodeGenerator: React.FC<BarcodeGeneratorProps> = ({ onSave }) => {
         </div>
         <div>
           <label htmlFor="mrp" className="block text-sm font-medium text-slate-300 mb-1">MRP (Price)</label>
-          <input type="number" id="mrp" value={mrp} onChange={(e) => setMrp(e.target.value)} className="w-full bg-slate-700 border border-slate-600 text-white rounded-md px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none" placeholder="e.g., 25.50" />
+          <input type="number" id="mrp" value={mrp} onChange={(e) => setMrp(e.target.value)} className="w-full bg-slate-700 border border-slate-600 text-white rounded-md px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none" placeholder="e.g., 9500.00" />
         </div>
         <button onClick={validateAndGenerate} className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-md transition-colors duration-200">
           Generate & Save
